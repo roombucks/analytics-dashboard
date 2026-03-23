@@ -1,0 +1,1733 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-cover1">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/73a6456ab3.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.css"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid bg-cover"></div>
+        <header>
+            <nav class="bg position-fixed w-100 navigation-bar">
+                <div class="header">
+                    <div class="toggle m-auto">
+                        <button class="btn p-0 border-0" id="hamburgerBtn" onclick="toggleclass()">
+                                <span class="line-bar"></span>
+                                <span class="line-bar"></span>
+                                <span class="line-bar"></span>
+                        </button>
+                    </div>
+    
+                    <div class="my-auto d-none d-sm-none d-md-block d-lg-block d-xl-block">
+                        <div class="brand">
+                            <a href="#" class="brand-link">
+                                <div class="brand-img">
+                                    <span class="brand-logo">E</span>
+                                </div>
+                                <span class="brand-name">
+                                    Elixir Admin
+                                </span>
+                            </a>    
+                            
+                        </div>
+                    </div>
+                    
+    
+                    <div class="menu">
+                        <div class="menu-item p-0">
+                            <!-- search -->
+                            <div class="dropdown-start">
+                                <button class="border-0 btn  py-3 btn-secondary bg-transparent" type="button" onclick="test()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a  6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                      </svg>
+                                </button>
+                                <!-- <div class="search-bar">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a  6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                    </svg>
+                                    <input type="text" placeholder="Search menu...">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                                      </svg>
+                                </div> -->
+                            </div>
+        
+                            <!-- menu item notif, search grid -->
+                            <!-- settings -->
+                            <div class="dropdown">
+                                <button class="btn border-0 py-3 border-success  btn-secondary  bg-transparent" type="button" data-bs-toggle="dropdown">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-grid-3x3-gap" viewBox="0 0 16 16">
+                                        <path d="M4 2v2H2V2h2zm1 12v-2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm5 10v-2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zM9 2v2H7V2h2zm5 0v2h-2V2h2zM4 7v2H2V7h2zm5 0v2H7V7h2zm5 0h-2v2h2V7zM4 12v2H2v-2h2zm5 0v2H7v-2h2zm5 0v2h-2v-2h2zM12 1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zm-1 6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zm1 4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-2z"/>
+                                      </svg>
+                                </button>
+                                <ul class="dropdown-menu  dropdown-menu-xl-end rounded-1 bg-dropdown ">
+                                    <li class="dropdown-item text-white-50"><h6>Quick Access</h6></li>
+                                   <div class="d-flex flex-wrap">
+                                    <li><a class="dropdown-item" href="#">
+                                        <div class=" popup-icon rounded-3 ">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope " viewBox="0 0 16 16">
+                                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                            </svg>
+                                        </div>
+                                        <span> Inbox</span>
+                                       
+                                    </a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">
+                                        <div class=" popup-icon rounded-3 ">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope " viewBox="0 0 16 16">
+                                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                            </svg>
+                                        </div>
+                                        <span> Inbox</span>
+                                       
+                                    </a>
+                                    </li>
+                                
+                                
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                    <div class=" popup-icon rounded-3 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope " viewBox="0 0 16 16">
+                                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                        </svg>
+                                      
+                                    </div>
+                                    <span> Inbox</span>
+                                   
+                                </a>
+                                </li>
+                                
+                                <li><a class="dropdown-item" href="#">
+                                    <div class=" popup-icon rounded-3 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope " viewBox="0 0 16 16">
+                                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                        </svg>
+                                      
+                                    </div>
+                                    <span> Inbox</span>
+                                   
+                                </a>
+                                </li>
+                                   </div>
+                                       
+                                </ul>
+                            </div>
+    
+                            <!-- bell notif -->
+                            <div class="dropdown">
+                                <button class="border-0 py-3 border-success btn btn-secondary  bg-transparent" type="button" data-bs-toggle="dropdown">
+                                    <div class="bell">
+                                        <span class="notif-dot"></span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <ul class="dropdown-menu  dropdown-menu-custom dropdown-menu-xl-end rounded-1 bg-dropdown ">
+                                    <div class="my-1 px-4  d-flex justify-content-between align-items-end">
+                                        <h6 class="fw-bold text-white-50 text-uppercase fs4 m-0">notification</h6>
+                                        <a href="#" class="text-decoration-none text-white fw-light"> <div class="rounded-1 fs4 px-2">Mark all as read</div></a>
+                                    </div>
+                                    
+                                    <hr>
+                                    <h6 class="fw-bold text-white-50 text-uppercase fs4 m-0 px-4 mb-2">unread</h6>
+                                    <li>
+                                        <a class="dropdown-item px-4 py-1" href="#">
+                                            <div class="d-flex align-items-start flex-row">
+                                                <div class="notif-custom1 position-relative">
+                                                    <img src="/assets/img/profile_1.jpg" alt="unread-1" class="rounded-1">
+                                                    <div class="position-absolute active-dot active-dot-border  d-block p-1 rounded-circle active-dot-position2"></div>
+                                                </div>
+                                                <div class="ps-3 text-wrap card-fs3">
+                                                   <span class="fw-semibold">Joy Pride</span>
+                                                   <span class="text-white-50">join to</span>
+                                                   <span>
+                                                    <i class="fa-solid fs-6 fa-fire-flame-curved mx-1 txt-danger"></i>
+                                                   </span>
+                                                   <span>Final Presentation</span>
+                                                   <div class="fs4 fw-light text-white-50">
+                                                    1min ago
+                                                   </div>
+                                                </div>
+                                            </div>
+                                        </a></li>
+                                    <li>
+                                        <a class="dropdown-item px-4 py-1" href="#">
+                                            <div class="d-flex align-items-start flex-row">
+                                                <div class="notif-custom1 position-relative">
+                                                    <img src="/assets/img/profile_2.jpg" alt="unread-1" class="rounded-1">
+                                                    <div class="position-absolute active-dot inactive-dot active-dot-border  d-block p-1 rounded-circle active-dot-position2"></div>
+                                                </div>
+                                                <div class="ps-3 text-wrap card-fs3">
+                                                   <span class="fw-semibold">David Hon</span>
+                                                   <span class="text-white-50">has sent you an email</span>
+                                                   <span>
+                                                    <i class="fa-solid fs-6 fa-envelope-circle-check mx-1 color-orange"></i>
+                                                   </span>
+                                                   <div class="fs4 fw-light text-white-50">
+                                                    2hrs ago
+                                                   </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item px-4 py-1" href="#">
+                                            <div class="d-flex align-items-start flex-row">
+                                                <div class="notif-custom1 position-relative">
+                                                    <img src="/assets/img/profile_3.jpg" alt="unread-1" class="rounded-1">
+                                                    <div class="position-absolute active-dot active-dot-border  d-block p-1 rounded-circle active-dot-position2"></div>
+                                                </div>
+                                                <div class="ps-3 text-wrap card-fs3">
+                                                   <span class="fw-semibold">Sandara Park</span>
+                                                   <span class="text-white-50">is requesting to update plan</span>
+                                                   <span><i class="fa-solid fa-rocket fs-6 mx-1 color-green"></i></span>
+                                                   <div class="fs4 fw-light text-white-50">
+                                                    Yesterday
+                                                   </div>
+                                                   <div class="mt-1">
+                                                    <button type="button" class="btn btn-primary px-2 fs4 rounded-1 ">Accept</button>
+                                                    <button type="button" class="btn btn-dark px-2 fs4 rounded-1 ms-1">Decline</button>
+                                                   </div>
+                                                   
+                                                </div>
+                                            </div>
+                                           
+                                        </a>
+                                    </li>
+                                   
+                                    <hr>
+                                    <h6 class="fw-bold text-white-50 text-uppercase fs4 m-0 px-4 mb-2">recent</h6>
+                                    <li>
+                                        <a class="dropdown-item px-4 py-1" href="#">
+                                            <div class="d-flex align-items-start flex-row">
+                                                <div class="notif-custom1 position-relative">
+                                                    <img src="/assets/img/profile_4.jpg" alt="unread-1" class="rounded-1">
+                                                </div>
+                                                <div class="ps-3 text-wrap card-fs3">
+                                                   <span class="fw-semibold">Abraham G.</span>
+                                                   <span class="text-white-50">uploaded a file to</span>
+                                                   <span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-font-fill mx-1 color-gray" viewBox="0 0 16 16">
+                                                        <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM5.057 6h5.886L11 8h-.5c-.18-1.096-.356-1.192-1.694-1.235l-.298-.01v5.09c0 .47.1.582.903.655v.5H6.59v-.5c.799-.073.898-.184.898-.654V6.755l-.293.01C5.856 6.808 5.68 6.905 5.5 8H5l.057-2z"/>
+                                                        </svg>
+                                                     </span>
+                                                   <span>Saitama Group</span>
+                                                   <div class="fs4 fw-light text-white-50">
+                                                    12hrs ago
+                                                   </div>
+                                                   <div class="mt-2 d-flex flex-row flex-nowrap align-items-center">
+                                                    <div class="me-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-filetype-pdf fs-1" viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM1.6 11.85H0v3.999h.791v-1.342h.803c.287 0 .531-.057.732-.173.203-.117.358-.275.463-.474a1.42 1.42 0 0 0 .161-.677c0-.25-.053-.476-.158-.677a1.176 1.176 0 0 0-.46-.477c-.2-.12-.443-.179-.732-.179Zm.545 1.333a.795.795 0 0 1-.085.38.574.574 0 0 1-.238.241.794.794 0 0 1-.375.082H.788V12.48h.66c.218 0 .389.06.512.181.123.122.185.296.185.522Zm1.217-1.333v3.999h1.46c.401 0 .734-.08.998-.237a1.45 1.45 0 0 0 .595-.689c.13-.3.196-.662.196-1.084 0-.42-.065-.778-.196-1.075a1.426 1.426 0 0 0-.589-.68c-.264-.156-.599-.234-1.005-.234H3.362Zm.791.645h.563c.248 0 .45.05.609.152a.89.89 0 0 1 .354.454c.079.201.118.452.118.753a2.3 2.3 0 0 1-.068.592 1.14 1.14 0 0 1-.196.422.8.8 0 0 1-.334.252 1.298 1.298 0 0 1-.483.082h-.563v-2.707Zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638H7.896Z"/>
+                                                          </svg>
+                                                    </div>
+                                                    <div class="ms-1 text-decoration-underline">
+                                                        financialreport_2.pdf
+                                                    </div>
+                                                    <div class="ms-2 fs4 text-white-50">
+                                                        2mb
+                                                    </div>
+                                                   </div>
+                                                   
+                                                </div>
+                                            </div>
+                                           
+                                        </a>
+                                        
+                                    </li>
+                                    <div class="text-center my-2">
+                                        <a href="#" class="text-uppercase color-cyan card-fs2 fw-bold py-3">
+                                            see all
+                                        </a>
+                                    </div>
+                                </ul>
+                            </div>
+
+                        </div>
+    
+                        <!-- user  -->
+                        <div class="user-container p-0 ">
+                            <div class="dropdown-start">
+                                <button class="btn-user py-0"  data-bs-toggle="dropdown">
+                                        <div class="d-flex flex-row">
+                                            <div class="user">
+                                                <div class="user-img">
+                                                    <span class="active-dot active-dot-position"></span>
+                                                    <img src="./assets/img/profile.jpg" alt="userprofile">
+                                                </div>
+                                            </div>
+                                        <div class="mx-2 me-3">
+                                                <h6 class="text-white user-link fw-bold m-0 mt-2 text-uppercase card-fs3">Leonardo Piccasso</h6>
+                                                <p class="text-white-50 text-start m-0 ">Admin</p>
+                                        </div>
+                                    </div>
+                                    
+                                </button>
+                                <ul class="dropdown-menu rounded-0 bg-dropdown mt-2 me-2">
+                                    
+                                        <h6 class="px-4 my-1 fw-bold text-white-50 fs4 text-uppercase">Welcome Jericho!</h6>
+                                            <li>
+                                                <a class="dropdown-item px-4 py-2 fs4" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person mb-1 color-cyan" viewBox="0 0 16 16">
+                                                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                                                      </svg>
+                                                    <span class="ms-2 text-uppercase fw-bold">Profile</span>
+                                                </a></li>
+                                            <li>
+                                                <a class="dropdown-item px-4 py-2 fs4" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope color-cyan" viewBox="0 0 16 16">
+                                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                                    </svg>
+                                                <span class="ms-2 text-uppercase fw-bold">Messages</span> 
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item px-4 py-2 fs4" href="#">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <div>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell color-cyan" viewBox="0 0 16 16">
+                                                                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                                                            </svg>
+                                                            <span class="ms-2 text-uppercase fw-bold">notification</span> 
+                                                        </div>
+
+                                                        <div class="px-2 rounded-1 bg-newnotification">4 new</div>
+                                                    </div>
+                                                   
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item px-4 py-2 fs4" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-event color-cyan" viewBox="0 0 16 16">
+                                                        <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                                                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                                                    </svg>  
+                                                <span class="ms-2 text-uppercase fw-bold">Calendar</span> 
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item px-4 py-2 card-fs2" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear color-cyan" viewBox="0 0 16 16">
+                                                        <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                                                        <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+                                                    </svg>
+                                                <span class="ms-2 text-uppercase fw-bold">Settings</span> 
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item px-4 py-2 card-fs2" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle color-cyan" viewBox="0 0 16 16">
+                                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                                    </svg>
+                                                <span class="ms-2 text-uppercase fw-bold">Help</span> 
+                                                </a>
+                                            </li>
+                                            
+                                            <hr>
+                                            <li>
+                                                <a class="dropdown-item px-4 py-2 card-fs2" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left color-cyan" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                                                        <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                                                    </svg>
+                                                <span class="ms-2 text-uppercase fw-bold">Logout</span> 
+                                                </a>
+                                            </li>
+
+    
+                                  
+                            
+                                </ul>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </nav>
+    
+    
+    
+            
+    
+            
+        </header>
+    
+            <!-- side nav -->
+    
+            <div id="Side_navigation" class="sidenav position-fixed">
+                
+                <div class="my-auto d-block d-sm-block d-md-none d-lg-none d-xl-none">
+                    <div class="brand">
+                        <a href="#" class="brand-link d-flex flex">
+                            <div class="brand-img">
+                                <span class="brand-logo">E</span>
+                            </div>
+                            <span class="brand-name text-dark">
+                                Elixir Admin
+                            </span>
+                        </a>    
+                    </div>
+                </div>
+                
+                <div class="menu-header">
+                    navigation
+                </div>
+                <div class="menu-item active-side-nav">
+                    <a href="# " class="menu-link ">
+                        <span class="menu-icon active-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-cpu" viewBox="0 0 16 16">
+                            <path d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+                            </svg>
+                        </span>
+                        <span class="menu-label active-link">Dashboard</span>
+                    </a>
+                </div>
+
+
+                <div class="menu-item">
+                    <a href="# " class="menu-link">
+                        <span class="menu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-bar-chart" viewBox="0 0 16 16">
+                                <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z"/>
+                            </svg>
+                        </span>
+                        <span class="menu-label">Analytics</span>
+                    </a>
+                </div>
+                <div class="menu-item email">
+                    <a href="messages.html" class="menu-link">
+                        <span class="menu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                            </svg>
+                        </span>
+                        <span class="menu-label">Messages</span>
+                    </a>
+                  
+                </div>
+               
+            
+                <div class="menu-header">
+                    components
+                </div>
+                <div class="menu-item">
+                    
+                    <span class="menu-icon">
+                    <a href="widget.html" class="menu-link ">
+                        <span class="menu-icon ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+                                <path d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"/>
+                            </svg>
+                        </span>
+                        
+                        <span class="menu-label ">widgets</span>
+                    </a>
+                </div>
+            
+    
+            
+                <div class="menu-item pos" onclick="dropdownCarret2()">
+                    <a href="# " class="menu-link">
+                        <span class="menu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-bag-check" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                            </svg>
+                        </span>
+                        <span class="menu-label">POS system</span>                                                   
+                    </a>
+                    <span class="dropdown-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                          </svg>    
+                    </span>
+                </div>
+                <div id="subNavPos" class="subnav">
+                    <a href="#" id="subLinks" class="sub-links links-1">customer order</a>
+                    <a href="#" id="subLinks" class="sub-links links-2">kitchen order</a>
+                    <a href="#" id="subLinks" class="sub-links links-3">counter checkout</a>
+                    <a href="#" id="subLinks" class="sub-links links-3">table booking</a>
+                    <a href="#" id="subLinks" class="sub-links links-3">menu stock</a>
+                </div>
+            
+                <div class="menu-item" onclick="dropdownCarret3()">
+                    <a href="# " class="menu-link">
+                        <span class="menu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-controller" viewBox="0 0 16 16">
+                                <path d="M11.5 6.027a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm-6.5-3h1v1h1v1h-1v1h-1v-1h-1v-1h1v-1z"/>
+                                <path d="M3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .62.39c.655-.079 1.35-.117 2.043-.117.72 0 1.443.041 2.12.126a.5.5 0 0 1 .622-.399l1.932.518a.5.5 0 0 1 .306.729c.14.09.266.19.373.297.408.408.78 1.05 1.095 1.772.32.733.599 1.591.805 2.466.206.875.34 1.78.364 2.606.024.816-.059 1.602-.328 2.21a1.42 1.42 0 0 1-1.445.83c-.636-.067-1.115-.394-1.513-.773-.245-.232-.496-.526-.739-.808-.126-.148-.25-.292-.368-.423-.728-.804-1.597-1.527-3.224-1.527-1.627 0-2.496.723-3.224 1.527-.119.131-.242.275-.368.423-.243.282-.494.575-.739.808-.398.38-.877.706-1.513.773a1.42 1.42 0 0 1-1.445-.83c-.27-.608-.352-1.395-.329-2.21.024-.826.16-1.73.365-2.606.206-.875.486-1.733.805-2.466.315-.722.687-1.364 1.094-1.772a2.34 2.34 0 0 1 .433-.335.504.504 0 0 1-.028-.079zm2.036.412c-.877.185-1.469.443-1.733.708-.276.276-.587.783-.885 1.465a13.748 13.748 0 0 0-.748 2.295 12.351 12.351 0 0 0-.339 2.406c-.022.755.062 1.368.243 1.776a.42.42 0 0 0 .426.24c.327-.034.61-.199.929-.502.212-.202.4-.423.615-.674.133-.156.276-.323.44-.504C4.861 9.969 5.978 9.027 8 9.027s3.139.942 3.965 1.855c.164.181.307.348.44.504.214.251.403.472.615.674.318.303.601.468.929.503a.42.42 0 0 0 .426-.241c.18-.408.265-1.02.243-1.776a12.354 12.354 0 0 0-.339-2.406 13.753 13.753 0 0 0-.748-2.295c-.298-.682-.61-1.19-.885-1.465-.264-.265-.856-.523-1.733-.708-.85-.179-1.877-.27-2.913-.27-1.036 0-2.063.091-2.913.27z"/>
+                            </svg>
+                        </span>
+                        <span class="menu-label">UI kits</span>
+                    </a>
+                    <span class="dropdown-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                          </svg>    
+                    </span>
+                </div>
+                    <div id="subNavUikits" class="subnav">ew
+                        <a href="#" id="subLinks" class="sub-links links-1">customer order</a>
+                        <a href="#" id="subLinks" class="sub-links links-2">kitchen order</a>
+                        <a href="#" id="subLinks" class="sub-links links-3">counter checkout</a>
+                        <a href="#" id="subLinks" class="sub-links links-3">table booking</a>
+                        <a href="#" id="subLinks" class="sub-links links-3">menu stock</a>
+                    </div>
+                
+                
+                <div class="menu-item" onclick="dropdownCarret4()">
+                    <a href="# " class="menu-link">
+                        <span class="menu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                                <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+                            </svg>
+                        </span>
+                        <span class="menu-label">forms</span>
+                    </a>
+                    <span class="dropdown-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                          </svg>    
+                    </span>
+                </div>
+                <div id="subNavForms" class="subnav">
+                    <a href="#" id="subLinks" class="sub-links links-1">customer order</a>
+                    <a href="#" id="subLinks" class="sub-links links-2">kitchen order</a>
+                    <a href="#" id="subLinks" class="sub-links links-3">counter checkout</a>
+                    <a href="#" id="subLinks" class="sub-links links-3">table booking</a>
+                    <a href="#" id="subLinks" class="sub-links links-3">menu stock</a>
+                </div>
+            
+            
+            
+                <div class="menu-item" onclick="dropdownCarret5()">
+                    <a href="# " class="menu-link">
+                        <span class="menu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid-3x3" viewBox="0 0 16 16">
+                                <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13zM1.5 1a.5.5 0 0 0-.5.5V5h4V1H1.5zM5 6H1v4h4V6zm1 4h4V6H6v4zm-1 1H1v3.5a.5.5 0 0 0 .5.5H5v-4zm1 0v4h4v-4H6zm5 0v4h3.5a.5.5 0 0 0 .5-.5V11h-4zm0-1h4V6h-4v4zm0-5h4V1.5a.5.5 0 0 0-.5-.5H11v4zm-1 0V1H6v4h4z"/>
+                            </svg>
+                        </span>
+                        <span class="menu-label">tables</span>
+    
+                    </a>
+                    <span class="dropdown-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                          </svg>    
+                    </span>
+                </div>
+                <div id="subNavTables" class="subnav">
+                    <a href="#" id="subLinks" class="sub-links links-1">customer order</a>
+                    <a href="#" id="subLinks" class="sub-links links-2">kitchen order</a>
+                    <a href="#" id="subLinks" class="sub-links links-3">counter checkout</a>
+                    <a href="#" id="subLinks" class="sub-links links-3">table booking</a>
+                    <a href="#" id="subLinks" class="sub-links links-3">menu stock</a>
+                </div>
+            
+                <div class="menu-item" onclick="dropdownCarret6()">
+                    <a href="# " class="menu-link">
+                        <span class="menu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pie-chart" viewBox="0 0 16 16">
+                                <path d="M7.5 1.018a7 7 0 0 0-4.79 11.566L7.5 7.793V1.018zm1 0V7.5h6.482A7.001 7.001 0 0 0 8.5 1.018zM14.982 8.5H8.207l-4.79 4.79A7 7 0 0 0 14.982 8.5zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+                            </svg>
+                        </span>
+                        <span class="menu-label">charts</span>
+                    </a>
+                    <span class="dropdown-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                          </svg>    
+                    </span>
+                </div>
+                <div id="subNavCharts" class="subnav">
+                    <a href="#" id="subLinks" class="sub-links links-1">customer order</a>
+                    <a href="#" id="subLinks" class="sub-links links-2">kitchen order</a>
+                    <a href="#" id="subLinks" class="sub-links links-3">counter checkout</a>
+                    <a href="#" id="subLinks" class="sub-links links-3">table booking</a>
+                    <a href="#" id="subLinks" class="sub-links links-3">menu stock</a>
+                </div>
+            
+            
+                <div class="menu-item">
+                    <a href="# " class="menu-link">
+                        <span class="menu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                                <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                                <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
+                            </svg>
+                        </span>
+                        <span class="menu-label">map</span>
+                    </a>
+                </div>
+            
+            
+                <div class="menu-item" onclick="dropdownCarret7()">
+                    <a href="# " class="menu-link">
+                        <span class="menu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-layout-sidebar" viewBox="0 0 16 16">
+                                <path d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3zm5-1v12h9a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H5zM4 2H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h2V2z"/>
+                            </svg>
+                        </span>
+                        <span class="menu-label">layout</span>
+                    </a>
+                    <span class="dropdown-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                          </svg>    
+                    </span>
+                </div>
+                <div id="subNavLayout" class="subnav">
+                    <a href="#" id="subLinks" class="sub-links links-1">customer order</a>
+                    <a href="#" id="subLinks" class="sub-links links-2">kitchen order</a>
+                    <a href="#" id="subLinks" class="sub-links links-3">counter checkout</a>
+                    <a href="#" id="subLinks" class="sub-links links-3">table booking</a>
+                    <a href="#" id="subLinks" class="sub-links links-3">menu stock</a>
+                </div>
+            
+            
+                <div class="menu-item" onclick="dropdownCarret8()">
+                    <a href="# " class="menu-link">
+                        <span class="menu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-collection" viewBox="0 0 16 16">
+                                <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13z"/>
+                            </svg>
+                        </span>
+                        <span class="menu-label">pages</span>
+                    </a>
+                    <span class="dropdown-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                          </svg>    
+                    </span>
+                </div>
+                <div id="subNavPages" class="subnav">
+                    <a href="#" id="subLinks" class="sub-links links-1">customer order</a>
+                    <a href="#" id="subLinks" class="sub-links links-2">kitchen order</a>
+                    <a href="#" id="subLinks" class="sub-links links-3">counter checkout</a>
+                    <a href="#" id="subLinks" class="sub-links links-3">table booking</a>
+                    <a href="#" id="subLinks" class="sub-links links-3">menu stock</a>
+                </div>
+    
+    
+                <!-- user -->
+                <div class="menu-header">
+                    user
+                </div>
+                <div class="menu-item">
+                    <a href="profile.html" class="menu-link">
+                        <span class="menu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                            </svg>
+                        </span>
+                        <span class="menu-label">profile</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="# " class="menu-link">
+                        <span class="menu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar4" viewBox="0 0 16 16">
+                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"/>
+                            </svg>
+                        </span>
+                        <span class="menu-label">Calendar</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="# " class="menu-link">
+                        <span class="menu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                                <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                                <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+                            </svg>
+                        </span>
+                        <span class="menu-label">settings</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="# " class="menu-link">
+                        <span class="menu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gem" viewBox="0 0 16 16">
+                                <path d="M3.1.7a.5.5 0 0 1 .4-.2h9a.5.5 0 0 1 .4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 0 1-.8 0L.1 5.3a.5.5 0 0 1 0-.6l3-4zm11.386 3.785-1.806-2.41-.776 2.413 2.582-.003zm-3.633.004.961-2.989H4.186l.963 2.995 5.704-.006zM5.47 5.495 8 13.366l2.532-7.876-5.062.005zm-1.371-.999-.78-2.422-1.818 2.425 2.598-.003zM1.499 5.5l5.113 6.817-2.192-6.82L1.5 5.5zm7.889 6.817 5.123-6.83-2.928.002-2.195 6.828z"/>
+                            </svg>
+                        </span>
+                        <span class="menu-label">helper</span>
+                    </a>
+                </div>
+            </div>
+    
+    
+        <main>
+            <button  onclick="toggleclass()" id="mobiledocker" class="bg-transparent sidenav-docker w-100 position-fixed  h-100"></button>
+                <div class="container-fluid">
+                    <div id="main" class="section1 my-5">
+
+                        <div class="row ">
+                            <div class="container-fluid"> 
+                                <div class="row justify-content-start px-3 mt-5 g-3"> 
+                                    <div class="header">
+                                        <div class="mb-1 position-relative">
+                                         
+                                            <h1 class="d-inline title text-capitalize fs-2 fw-bolder l-spacing-1">
+                                                Hello, Leonardo
+                                            </h1>
+                                            <p class="d-block p-color section-p">page header description goes here...</p>
+                                        </div>
+                                        <div class="generate-report">
+                                                <button class="generate-btn rounded-1 px-2 py-1">
+                                                 <span class="generate-btn-icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                                                            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                                                          </svg>
+                                                </span>
+                                                    Generate Report
+                                                </button>    
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-6 col-md-6" >
+                                        <div class="card rounded-0">
+                                            <!-- card style -->
+                                            <span class="card-border1"></span>
+                                            <div class="card-body">
+                                                <div class="card-title d-flex">
+                                                    <span class="flex-grow-1 card-fs3">total visitors</span>
+                                                    <span class="card-success card-fs1 rounded-1">
+                                                        <span>18%</span> 
+                                                        <span class="card-icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                                                <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                                            </svg>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                              <div class="row ">
+                                                <div class="col-6 d-flex align-items-end">
+                                                    <h4 class="card-subtitle fw-bold text-white">289.5k</h4>
+                                                    
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="chart-container">
+                                                        <div id="barChart" class="d-flex justify-content-center">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-1 card-fs2">
+                                                    <span>
+                                                        <i class="fa-solid fa-arrow-trend-up card-success"></i>
+                                                    </span>
+                                                    <span class="ms-1">18.9%</span>
+                                                    <span class="ms-1">+21.9K this week</span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+
+
+                                    <div class="col-xl-3 col-lg-6 col-md-6" >
+                                        <div class="card rounded-0">
+                                            <!-- card style -->
+                                            <span class="card-border1"></span>
+                                            <div class="card-body">
+                                                <div class="card-title d-flex">
+                                                    <span class="flex-grow-1 card-fs3">revenue</span>
+                                                    <span class="card-success card-fs1">31%
+                                                        <span class="card-icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                                                <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                                            </svg>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                              <div class="row ">
+                                                <div class="col-6 d-flex align-item-center">
+                                                    <h4 class="card-subtitle fw-bold text-white mt-auto">$945.7</h4>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="chart-container">
+                                                        <div id="pieChart" class="d-flex justify-content-center">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-1 card-fs2">
+                                                    <span>
+                                                        <i class="fa-solid fa-arrow-trend-up card-success"></i>
+                                                    </span>
+                                                    <span class="ms-1">94.9%</span>
+                                                    <span class="ms-1">+848.9K this week</span>
+                                                </div>
+                                              </div>
+                                              
+                                             
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-3 col-lg-6 col-md-6" >
+                                        <div class="card rounded-0 ">
+                                            <!-- card style -->
+                                            <span class="card-border1"></span>
+                                        
+                                            <div class="card-body">
+                                                <div class="card-title d-flex">
+                                                    <span class="flex-grow-1 card-fs3">daily average</span>
+                                                    <span class="card-success txt-danger card-fs1">43%
+                                                        <span class="card-icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill txt-danger" viewBox="0 0 16 16">
+                                                                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                                            </svg>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                              <div class="row ">
+                                                <div class="col-6 d-flex align-item-center">
+                                                    <h4 class="card-subtitle fw-bold text-white mt-auto">$89.3</h4>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="chart-container">
+                                                        <div id="donutChart" class="d-flex justify-content-center ">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-1 card-fs2">
+                                                    <span>
+                                                        <i class="fa-solid fa-arrow-trend-down card-danger"></i>
+                                                    </span>
+                                                    <span class="ms-1">1.9%</span>
+                                                    <span class="ms-1">-3.9K this year</span>
+                                                </div>
+                                              </div>
+                                              
+                                              
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-3 col-lg-6 col-md-6" >
+                                        <div class="card rounded-0">
+                                            <!-- card style -->
+                                            <span class="card-border1"></span>
+                                        
+                                            <div class="card-body">
+                                                <div class="card-title d-flex">
+                                                    <span class="flex-grow-1 card-fs3">online orders</span>
+                                                    <span class="card-success card-fs1">27%
+                                                        <span class="card-icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                                                <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                                            </svg>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                              <div class="row ">
+                                                <div class="col-6 d-flex align-item-center">
+                                                    <h4 class="card-subtitle fw-bold text-white mt-auto">8.3m</h4>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="chart-container">
+                                                        <div id="lineTopChart" class="d-flex justify-content-center ">
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-1 card-fs2">
+                                                    <span>
+                                                        <i class="fa-solid fa-arrow-trend-up card-success"></i>
+                                                    </span>
+                                                    <span class="ms-1">89.9%</span>
+                                                    <span class="ms-1">+800.9K this week</span>
+                                                </div>
+                                              </div>
+                                              
+                                             
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="col-12 col-xl-6" >
+                                        <div class="card h-100 rounded-0">
+                                            <!-- card style -->
+                                            <span class="card-border1"></span>
+                                            <div class="card-body">
+                                              <div class="d-flex header">
+                                                <h5 class="card-title card-fs3  flex-grow-1">product sales</h5>
+                                                <div class="">
+                                                    <span class="me-2 sort-by">Sort By:</span>
+                                                    <button type="button" class="px-2 py-1 rounded-1 btn-calendar" data-bs-toggle="dropdown">  
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-week-fill me-2" viewBox="0 0 16 16">
+                                                            <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zM9.5 7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm3 0h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zM2 10.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                                                        </svg>
+                                                        <span>Today</span>  
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down " viewBox="0 0 16 16">
+                                                            <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                                                        </svg>                                                        
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-end">
+                                                        <li><a class="dropdown-item" href="#">Today</a></li>
+                                                        <li><a class="dropdown-item" href="#">Weekly</a></li>
+                                                        <li><a class="dropdown-item" href="#">Monthly</a></li>
+                                                        <li><a class="dropdown-item" href="#">Yearly</a></li>
+
+                                                    </ul>
+                                                  </div>
+                                              </div>
+                                              <div class="my-4">
+                                                <div class="d-flex flex-row align-items-start"> 
+                                                    <h4 class="fw-bolder text-white">$789.51k</h4>
+                                                    <span class="ms-3 d-flex justify-content-center flex-column ">
+                                                        <span class="d-block">
+                                                            <i class="fa-solid fa-arrow-trend-up card-success me-1"></i>
+                                                            <span class="card-fs2">8.7%</span>
+                                                        </span>
+                                                        <span class="card-fs2 card-uppercase">
+                                                            vs prev. 24 days
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                
+                                              </div>
+                                              <div class="my-4">
+                                               
+                                                <div class="row justify-content-around ">
+                                                    <div class="col-3">
+                                                        <div class="text-center">
+                                                                <h5 class="card-title card-fs2">target</h5>                                                    
+                                                                <span class="card-data fs-5 fw-bolder text-white">$846.41</span>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="text-center">
+                                                            <h5 class="card-title card-fs2">last week</h5>                                                    
+                                                            <span class="card-data card-fs3 text-white d-flex flex-nowrap justify-content-center">
+                                                                <span>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up card-success me-1" viewBox="0 0 16 16">
+                                                                        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                                                                      </svg>
+                                                                </span>
+                                                            <span class="card-data fs-5 fw-bolder text-white">$124.54</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="text-center">
+                                                            <h5 class="card-title card-fs2">last month</h5>                                                    
+                                                            <span class="card-data card-fs3 text-white d-flex flex-nowrap  justify-content-center">
+                                                                <span>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down txt-danger me-1" viewBox="0 0 16 16">
+                                                                        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                                                                    </svg>
+                                                                </span>
+                                                                <span class="card-data fs-5 fw-bolder text-white">$453.41</span>
+                                                            </span>
+                                                         </div>
+                                                    </div>
+                                                  </div>
+                                              </div>
+                                              <div class="mt-2">
+                                                    <div id="areaChart"></div>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                        <div class="col-12 col-xl-6 ">
+                                            <div class="card h-100 rounded-0 ">
+                                                <div class="card-body">
+                                                    <div class="d-flex header">
+                                                      <h5 class="card-title card-fs3  flex-grow-1">stores sales</h5>
+                                                      <div class="">
+                                                        <span class="me-2 sort-by">Sort By:</span>
+                                                        <button type="button" class=" px-2 py-1 rounded-1 btn-calendar" data-bs-toggle="dropdown">  
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-week-fill me-2" viewBox="0 0 16 16">
+                                                                <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zM9.5 7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm3 0h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zM2 10.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                                                            </svg>
+                                                            <span>Monthly</span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down " viewBox="0 0 16 16">
+                                                                <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                                                            </svg>                                                                
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#">Today</a></li>
+                                                            <li><a class="dropdown-item" href="#">Weekly</a></li>
+                                                            <li><a class="dropdown-item" href="#">Monthly</a></li>
+                                                            <li><a class="dropdown-item" href="#">Yearly</a></li>
+                                                        </ul>
+                                                      </div>
+                                                        
+                                                    </div>
+                                                    <div class="mt-4">
+                                                        <div class="my-4">
+                                                            <div class="d-flex flex-row align-items-start">
+                                                                <h4 class="fw-bolder text-white">$243.51k</h4>
+                                                                <span class="ms-3 d-flex justify-content-center flex-column ">
+                                                                    <span class="d-block">
+                                                                        <i class="fa-solid fa-arrow-trend-up card-success me-1"></i>
+                                                                        <span class="card-fs2">8.7%</span>
+                                                                    </span>
+                                                                    <span class="card-fs2 card-uppercase">
+                                                                        vs prev. 24 days
+                                                                    </span>
+                                                                </span>
+                                                            </div>
+                                                            
+                                                          </div>
+                                                        
+                                                        <div class="row justify-content-center">
+                                                            <div class="col-11">
+                                                                <div class="row">
+                                                                    <div class="col-12 col-lg-6">
+                                                                        <div class="row justify-content-center align-items-center">
+                                                                          <div class="col-2 col-xl-4  px-0">
+                                                                              <div class="card-details">
+                                                                                <div class="chart-container">
+                                                                                    <div id="donutlb1Chart"></div>
+                                                                                </div>                                           
+                                                                              </div>
+                                                                          </div>
+                                                                          <div class="col-8 px-1">
+                                                                              <div class="card-details">
+                                                                                    <h5 class="card-title card-fs2 mb-1">Expenses</h5>
+                                                                                    <span class="fs-5 fw-bolder text-white">$182.74</span>
+                                                                                    <div class="progress mt-1" style="height: 4px;">
+                                                                                        <div class="progress-bar prog-25" role="progressbar" aria-label="Example 1px high" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                        <div class="progress-bar prog-75" role="progressbar" aria-label="Example 1px high" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                    </div>
+                                                                                    <div class="mt-1">
+                                                                                        <p class="card-fs2">
+                                                                                            <span class="mt-2 txt-danger">+84.23% </span>     
+                                                                                            last updated 1 min ago
+                                                                                        </p>    
+                                                                                    </div>
+                                                                                                                            
+                                                                              </div>
+                                                                          </div>                                              
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-12 col-lg-6">
+                                                                        <div class="row justify-content-center align-items-center">
+                                                                          <div class="col-2 col-xl-4 px-0">
+                                                                              <div class="card-details">
+                                                                                <div class="chart-container">
+                                                                                    <div id="donutlb2Chart"></div>
+                                                                                </div>                                           
+                                                                              </div>
+                                                                          </div>
+                                                                          <div class="col-8 px-1">
+                                                                              <div class="card-details">
+                                                                                    <h5 class="card-title card-fs2 mb-1">profit ratio</h5>
+                                                                                    <span class="fs-5 fw-bolder text-white">$245.74</span>
+                                                                                    <div class="progress mt-1" style="height: 4px;">
+                                                                                        <div class="progress-bar prog-25" role="progressbar" aria-label="Example 1px high" style="width: 65%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                        <div class="progress-bar prog-75" role="progressbar" aria-label="Example 1px high" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                                    </div>
+                                                                                    <div class="mt-1">
+                                                                                        <p class="card-fs2">
+                                                                                            <span class=" mt-2 card-success">+32.23% </span>       
+                                                                                            last updated 1 min ago
+                                                                                        </p>    
+                                                                                    </div>
+                                                                                                                            
+                                                                              </div>
+                                                                          </div>
+                                                                                                                                        
+                                                                        </div>
+                                                                    </div>
+                                                                  </div>
+                                                            </div>
+                                                        </div>
+                                                      
+                                                    </div>
+                                                        <div id="lineChart"></div>
+                                                  </div>
+                                              </div>
+                                        </div>
+
+                                        <div class="col-12 col-xl-6" >
+                                            <div class="card h-100 rounded-0">
+                                                <!-- card style -->
+                                                <span class="card-border1"></span>
+                                                <div class="card-body py-3 px-0">
+                                                  <div class="d-flex flex-wrap header px-3">
+                                                    <h5 class="card-title card-fs3  flex-grow-1">top sellers</h5>
+                                                    <div>
+                                                        <button type="button" class="px-2 py-1 rounded-1 btn-calendar" data-bs-toggle="dropdown">  
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark me-1" viewBox="0 0 16 16">
+                                                                <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+                                                            </svg>
+                                                            <span>Report</span>  
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                                                <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                                                            </svg>                                                 
+                                                        </button> 
+                                                        
+                                                        <ul class="dropdown-menu dropdown-menu-end">
+                                                            <li><a class="dropdown-item" href="#">Today</a></li>
+                                                            <li><a class="dropdown-item" href="#">Weekly</a></li>
+                                                            <li><a class="dropdown-item" href="#">Monthly</a></li>
+                                                            <li><a class="dropdown-item" href="#">Yearly</a></li>
+                                                        </ul>
+                                                      </div>
+                                                  </div>
+                                                  <div class="card-info mt-4">
+                                                        <div class="table-responsive">
+                                                            <table class="table text-white w-100 align-middle text-nowrap">
+                                                                <tbody>
+                                                                  <tr>
+                                                                    <td class="py-3 px-3">
+                                                                        <div class="d-flex">
+                                                                            <div class="table-img position-relative">
+                                                                                <img src="/assets/img/brand4.png" alt="companylogo1">
+                                                                            </div>
+                                                                            <div class="ms-3">
+                                                                                <div class="d-flex flex-column">
+                                                                                    <span class="fw-bold text-white mb-1 text-uppercase card-fs2">Accent Industry</span>
+                                                                                    <span class="fw-light card-fs2 text-white">
+                                                                                        Adams
+                                                                                        Baker
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="border-0">
+                                                                       <span class="fw-light color-darkGray">
+                                                                        Bags and Wallets
+                                                                       </span> 
+                                                                    </td>
+                                                                    <td class="border-0">
+                                                                        <div class="d-flex flex-column">
+                                                                            
+                                                                            <span>
+                                                                                3958
+                                                                            </span>
+                                                                            <span class="card-fs2 fw-light color-darkGray text-capitalize">
+                                                                                stock
+                                                                            </span>
+                                                                        </div>
+                                                                       
+                                                                    </td>
+                                                                    <td class="border-0">
+                                                                        <span class="fw-light color-darkGray">$45854</span>
+                                                                    </td>
+                                                                    <td class="border-0">
+                                                                        <span>
+                                                                            <i class="fa-solid fa-chart-simple color-green fs-6"></i>
+                                                                        </span>
+                                                                        <span>37%</span>
+                                                                    </td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                    <td class="py-3 px-3">
+                                                                        <div class="d-flex">
+                                                                            <div class="table-img">
+                                                                                <img src="/assets/img/brand5.png" alt="companylogo1">
+                                                                            </div>
+                                                                            <div class="ms-3">
+                                                                                <div class="d-flex flex-column">
+                                                                                    <span class="fw-bold text-white mb-1 text-uppercase card-fs2">Rentoor Marketing</span>
+                                                                                    <span class="fw-light card-fs2 text-white">
+                                                                                        Clark
+                                                                                        Davis Co.
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="color-darkGray fw-light">
+                                                                            Watches
+                                                                        </span>
+                                                                    </td>
+                                                                    <td class="border-0">
+                                                                        <div class="d-flex flex-column">
+                                                                            
+                                                                            <span>
+                                                                                4875
+                                                                            </span>
+                                                                            <span class="card-fs2 color-darkGray fw-light text-capitalize">
+                                                                                stock
+                                                                            </span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="fw-light color-darkGray">$54583</span>
+                                                                    </td>
+                                                                    <td class="border-0">
+                                                                        <span>
+                                                                            <i class="fa-solid fa-chart-simple color-green fs-6"></i>
+                                                                        </span>
+                                                                        <span>84%</span>
+                                                                    </td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                    <td class="py-3 px-3">
+                                                                        <div class="d-flex">
+                                                                            <div class="table-img">
+                                                                                <img src="/assets/img/brand2.png" alt="companylogo1">
+                                                                            </div>
+                                                                            <div class="ms-3">
+                                                                                <div class="d-flex flex-column">
+                                                                                    <span class="fw-bold text-white mb-1 text-uppercase card-fs2">Bonfire Adventures</span>
+                                                                                    <span class="fw-light text-white card-fs2">Evans Frank</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="color-darkGray fw-light">
+                                                                            Bike Accessories
+                                                                        </span>
+                                                                    </td>
+                                                                    <td class="border-0">
+                                                                        <div class="d-flex flex-column">
+                                                                          
+                                                                            <span>
+                                                                                7851
+                                                                            </span>
+                                                                            <span class="card-fs2 color-darkGray fw-light text-capitalize">
+                                                                                stock
+                                                                            </span>
+                                                                        </div>
+                                                                       
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="fw-light  color-darkGray">$12344</span>
+                                                                    </td>
+                                                                    <td class="border-0">
+                                                                        <span>
+                                                                            <i class="fa-solid fa-chart-simple color-green fs-6"></i>
+                                                                        </span>
+                                                                        <span>78%</span>
+                                                                    </td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                    <td class="py-3 px-3">
+                                                                        <div class="d-flex">
+                                                                            <div class="table-img">
+                                                                                <img src="/assets/img/brand1.png" alt="companylogo1">
+                                                                            </div>
+                                                                            <div class="ms-3">
+                                                                                <div class="d-flex flex-column">
+                                                                                    <span class="fw-bold text-white mb-1 text-uppercase card-fs2">The Mortgage Maven</span>
+                                                                                    <span class="fw-light text-white card-fs2">Ghosh
+                                                                                        Hills</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="color-darkGray fw-light">
+                                                                            Mobile Phones
+                                                                        </span>
+                                                                    </td>
+                                                                    <td class="border-0">
+                                                                        <div class="d-flex flex-column">
+                                                                          
+                                                                            <span>
+                                                                                6235
+                                                                            </span>
+                                                                            <span class="card-fs2 color-darkGray fw-light text-capitalize">
+                                                                                stock
+                                                                            </span>
+                                                                        </div>
+                                                                       
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="fw-light color-darkGray">$84557</span>
+                                                                    </td> 
+                                                                    <td class="border-0">
+                                                                        <span>
+                                                                            <i class="fa-solid fa-chart-simple color-green fs-6"></i>
+                                                                        </span>
+                                                                        <span>43%</span>
+                                                                        </td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                    <td class="py-3 px-3">
+                                                                        <div class="d-flex">
+                                                                            <div class="table-img">
+                                                                                <img src="/assets/img/brand3.png" alt="companylogo1">
+                                                                            </div>
+                                                                            <div class="ms-3">
+                                                                                <div class="d-flex flex-column">
+                                                                                    <span class="fw-bold text-white mb-1 text-uppercase card-fs2">Your Security First</span>
+                                                                                    <span class="fw-light text-white card-fs2">Irwin
+                                                                                        Jones</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="color-darkGray fw-light">
+                                                                           Furnitures
+                                                                        </span>
+                                                                    </td>
+                                                                    <td class="border-0">
+                                                                        <div class="d-flex flex-column">
+                                                                            <span>
+                                                                                3215
+                                                                            </span>
+                                                                            <span class="card-fs2 color-darkGray fw-light text-capitalize">
+                                                                                stock
+                                                                            </span>
+                                                                          
+                                                                        </div>
+                                                                       
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="fw-light color-darkGray">
+                                                                           
+                                                                            <span>
+                                                                                $98457
+                                                                            </span>
+                                                                            
+                                                                        </span>
+                                                                    </td>
+                                                                    <td class="border-0">
+                                                                        <span>
+                                                                            <i class="fa-solid fa-chart-simple color-green fs-6"></i>
+                                                                        </span>
+                                                                        <span>
+                                                                            62%
+                                                                        </span>
+                                                                        </td>
+                                                                  </tr>
+                                                                </tbody>
+                                                              </table>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <nav aria-label="...">
+                                                            <ul class="pagination pagination-sm p-3 m-0 rounded-2 justify-content-end align-items-center">
+                                                              <li class="page-item">
+                                                                <a class="page-link bg-transparent">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                                                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                                                                    </svg>
+                                                                </a>   
+                                                              </li>
+                                                              <li class="page-item">
+                                                                <a class="page-link bg-transparent" href="#">1</a></li>
+                                                              <li class="page-item" aria-current="page">
+                                                                <a class="page-link bg-transparent" href="#">2</a>
+                                                              </li>
+                                                              <li class="page-item">
+                                                                <a class="page-link card-active color-black" href="#">3</a></li>
+                                                              <li class="page-item">
+                                                                <a class="page-link bg-transparent" href="#">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                                                    </svg>
+                                                                </a>
+                                                              </li>
+                                                            </ul>
+                                                        </nav>
+                                                    
+                                                </div>
+                                                  
+                                                  
+                                                </div>
+                                            </div>
+                                        </div>
+    
+    
+                                            <div class="col-12 col-xl-6 ">
+                                                <div class="card h-100 rounded-0">
+                                                    <div class="card-body px-0 py-3">
+                                                        <div class="d-flex header px-3">
+                                                          <h5 class="card-title card-fs3  flex-grow-1">best selling products</h5>
+                                                          <div class="">
+                                                            <span class="me-2 sort-by">Sort By:</span>
+                                                            <button type="button" class=" px-2 py-1 rounded-1 btn-calendar" data-bs-toggle="dropdown">  
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-week-fill me-2" viewBox="0 0 16 16">
+                                                                    <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zM9.5 7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm3 0h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zM2 10.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                                                                </svg>
+                                                                <span>Monthly</span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                                                    <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                                                                </svg>                                                                
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="#">Today</a></li>
+                                                                <li><a class="dropdown-item" href="#">Weekly</a></li>
+                                                                <li><a class="dropdown-item" href="#">Monthly</a></li>
+                                                                <li><a class="dropdown-item" href="#">Yearly</a></li>
+                                                            </ul>
+                                                          </div>
+                                                            
+                                                        </div>
+
+                                                        <div class="card-info mt-4">
+                                                            <div class="table-responsive">
+                                                                <table class="table text-white w-100 align-middle text-nowrap">
+                                                                    <tbody>
+                                                                      <tr>
+                                                                        <td class="py-3 px-3">
+                                                                            <div class="d-flex">
+                                                                                <div class="table-img position-relative">
+                                                                                    <img src="/assets/img/prod1.jpg" class="rounded-2" alt="companylogo1">
+                                                                                </div>
+                                                                                <div class="ms-3">
+                                                                                    <div class="d-flex flex-column">
+                                                                                        <span class="fw-bold text-white mb-1 text-uppercase card-fs2">branded t-shirts</span>
+                                                                                        <span class="fw-light card-fs2 text-white text-capitalize">
+                                                                                           apr 2021 24
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="border-0">
+                                                                            <div class="d-flex flex-column"> 
+                                                                                <span>
+                                                                                    $19 .29
+                                                                                </span>
+                                                                                <span class="card-fs2 fw-light color-darkGray text-capitalize">
+                                                                                    price
+                                                                                </span>
+                                                                            </div> 
+                                                                        </td>
+                                                                        <td class="border-0">
+                                                                            <div class="d-flex flex-column"> 
+                                                                                <span>
+                                                                                    3958
+                                                                                </span>
+                                                                                <span class="card-fs2 fw-light color-darkGray text-capitalize">
+                                                                                    stock
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="border-0">
+                                                                            <div class="d-flex flex-column">
+                                                                                <span>
+                                                                                    450
+                                                                                </span>
+                                                                                <span class="card-fs2 color-darkGray fw-light text-capitalize">
+                                                                                    orders
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="border-0">
+                                                                            <div class="d-flex flex-column">
+                                                                                <span>
+                                                                                    $234.63
+                                                                                </span>
+                                                                                <span class="card-fs2 color-darkGray fw-light text-capitalize">
+                                                                                    Amount
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                      </tr>
+                                                                      <tr>
+                                                                        <td class="py-3 px-3">
+                                                                            <div class="d-flex">
+                                                                                <div class="table-img">
+                                                                                    <img src="/assets/img/prod2.jpg" class="rounded-2" alt="companylogo1">
+                                                                                </div>
+                                                                                <div class="ms-3">
+                                                                                    <div class="d-flex flex-column">
+                                                                                        <span class="fw-bold text-white mb-1 text-uppercase card-fs2">bentwood chair</span>
+                                                                                        <span class=" text-capitalize fw-light card-fs2 text-white">
+                                                                                            mar 2021 19
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="d-flex flex-column"> 
+                                                                                <span>
+                                                                                    $24.10
+                                                                                </span>
+                                                                                <span class="card-fs2 fw-light color-darkGray text-capitalize">
+                                                                                    price
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="border-0">
+                                                                            <div class="d-flex flex-column">
+                                                                                <span class="bd px-1 rounded-1">
+                                                                                    out of stock
+                                                                                </span>
+                                                                                <span class="card-fs2 fw-light color-darkGray text-capitalize">
+                                                                                    stock
+                                                                                </span>
+                                                                            </div>
+                                                                           
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="d-flex flex-column">
+                                                                                <span>
+                                                                                    57
+                                                                                </span>
+                                                                                <span class="card-fs2 color-darkGray fw-light text-capitalize">
+                                                                                    orders
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="border-0">
+                                                                            <div class="d-flex flex-column">
+                                                                                <span>
+                                                                                    $234.63
+                                                                                </span>
+                                                                                <span class="card-fs2 color-darkGray fw-light text-capitalize">
+                                                                                    Amount
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                      </tr>
+                                                                      <tr>
+                                                                        <td class="py-3 px-3">
+                                                                            <div class="d-flex">
+                                                                                <div class="table-img">
+                                                                                    <img src="/assets/img/prod3.jpg" class="rounded-2" alt="companylogo1">
+                                                                                </div>
+                                                                                <div class="ms-3">
+                                                                                    <div class="d-flex flex-column">
+                                                                                        <span class="fw-bold text-white mb-1 text-uppercase card-fs2">borosil paper cup</span>
+                                                                                        <span class="fw-light text-white card-fs2">Jan 2021 17</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="d-flex flex-column"> 
+                                                                                <span>
+                                                                                    $84.29
+                                                                                </span>
+                                                                                <span class="card-fs2 fw-light color-darkGray text-capitalize">
+                                                                                    price
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="border-0">
+                                                                            <div class="d-flex flex-column">
+                                                                              
+                                                                                <span>
+                                                                                    7851
+                                                                                </span>
+                                                                                <span class="card-fs2 color-darkGray fw-light text-capitalize">
+                                                                                    stock
+                                                                                </span>
+                                                                            </div>
+                                                                           
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="d-flex flex-column">
+                                                                                <span>
+                                                                                    120
+                                                                                </span>
+                                                                                <span class="card-fs2 color-darkGray fw-light text-capitalize">
+                                                                                    orders
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="border-0">
+                                                                            <div class="d-flex flex-column">
+                                                                                <span>
+                                                                                    $234.63
+                                                                                </span>
+                                                                                <span class="card-fs2 color-darkGray fw-light text-capitalize">
+                                                                                    Amount
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                      </tr>
+                                                                      <tr>
+                                                                        <td class="py-3 px-3">
+                                                                            <div class="d-flex">
+                                                                                <div class="table-img ">
+                                                                                    <img src="/assets/img/prod4.jpg" class="rounded-2" alt="companylogo1">
+                                                                                </div>
+                                                                                <div class="ms-3">
+                                                                                    <div class="d-flex flex-column">
+                                                                                        <span class="fw-bold text-white mb-1 text-uppercase card-fs2">one seater sofa</span>
+                                                                                        <span class="text-capitalize fw-light text-white card-fs2">
+                                                                                            mar 2021 01</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="d-flex flex-column"> 
+                                                                                <span>
+                                                                                    $65.04
+                                                                                </span>
+                                                                                <span class="card-fs2 fw-light color-darkGray text-capitalize">
+                                                                                    price
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="border-0">
+                                                                            <div class="d-flex flex-column">
+                                                                                
+                                                                                <span class="bd px-1 rounded-1">
+                                                                                    out of stock
+                                                                                </span>
+                                                                                <span class="card-fs2 color-darkGray fw-light text-capitalize">
+                                                                                    stock
+                                                                                </span>
+                                                                            </div>
+                                                                           
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="d-flex flex-column">
+                                                                                <span>
+                                                                                    99
+                                                                                </span>
+                                                                                <span class="card-fs2 color-darkGray fw-light text-capitalize">
+                                                                                    orders
+                                                                                </span>
+                                                                            </div>
+                                                                        </td> 
+                                                                        <td class="border-0">
+                                                                            <div class="d-flex flex-column">
+                                                                                <span>
+                                                                                    $234.63
+                                                                                </span>
+                                                                                <span class="card-fs2 color-darkGray fw-light text-capitalize">
+                                                                                    Amount
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                      </tr>
+                                                                      <tr>
+                                                                        <td class="py-3 px-3">
+                                                                            <div class="d-flex">
+                                                                                <div class="table-img">
+                                                                                    <img src="/assets/img/prod5.jpg" class="rounded-2" alt="companylogo1">
+                                                                                </div>
+                                                                                <div class="ms-3">
+                                                                                    <div class="d-flex flex-column">
+                                                                                        <span class="fw-bold text-white mb-1 text-uppercase card-fs2">stillbird helmet</span>
+                                                                                        <span class="text-capitalize fw-light text-white card-fs2">
+                                                                                            feb 2021 11</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="d-flex flex-column"> 
+                                                                                <span>
+                                                                                    $52.99
+                                                                                </span>
+                                                                                <span class="card-fs2 fw-light color-darkGray text-capitalize">
+                                                                                    price
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="border-0">
+                                                                            <div class="d-flex flex-column">
+                                                                                <span>
+                                                                                    3215
+                                                                                </span>
+                                                                                <span class="card-fs2 color-darkGray fw-light text-capitalize">
+                                                                                    stock
+                                                                                </span>
+                                                                            </div>
+                                                                           
+                                                                        </td>
+                                                                        <td>
+                                                                                <div class="d-flex flex-column">
+                                                                                    <span>
+                                                                                        34
+                                                                                    </span>
+                                                                                    <span class="card-fs2 color-darkGray fw-light text-capitalize">
+                                                                                        orders
+                                                                                    </span>
+                                                                                </div>
+                                                                        
+                                                                        </td>
+                                                                        <td class="border-0">
+                                                                            <div class="d-flex flex-column">
+                                                                                <span>
+                                                                                    $234.63
+                                                                                </span>
+                                                                                <span class="card-fs2 color-darkGray fw-light text-capitalize">
+                                                                                    Amount
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                      </tr>
+                                                                    </tbody>
+                                                                  </table>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                                <nav aria-label="...">
+                                                                    <ul class="pagination pagination-sm p-3 m-0 rounded-2 justify-content-end align-items-center">
+                                                                      <li class="page-item">
+                                                                        <a class="page-link bg-transparent">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                                                                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                                                                            </svg>
+                                                                        </a>   
+                                                                      </li>
+                                                                      <li class="page-item">
+                                                                        <a class="page-link bg-transparent" href="#">1</a></li>
+                                                                      <li class="page-item" aria-current="page">
+                                                                        <a class="page-link card-active color-black" href="#">2</a>
+                                                                      </li>
+                                                                      <li class="page-item">
+                                                                        <a class="page-link bg-transparent" href="#">3</a></li>
+                                                                      <li class="page-item">
+                                                                        <a class="page-link bg-transparent" href="#">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                                                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                                                            </svg>
+                                                                        </a>
+                                                                      </li>
+                                                                    </ul>
+                                                                </nav>
+                                                            
+                                                        </div>
+                                                            
+                                                      </div>
+                                                  </div>
+                                            </div>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+             
+        </main>
+        
+    
+    
+    <script>
+      
+        </script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/assets/plugins/index.js"> </script>
+    <script src="/assets/plugins/style.js"> </script>
+    
+</body>
+</html>
