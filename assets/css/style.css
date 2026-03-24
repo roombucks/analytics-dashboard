@@ -53,7 +53,7 @@
     height: 100%;
     width: 100%;
     z-index: -4;
-    background-image: var(--bg-image);
+    background-image: var(/assets/img/bg3.jpg);
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
