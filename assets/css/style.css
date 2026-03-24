@@ -323,7 +323,7 @@ code{
     height: 1.9rem;
     padding: .8rem;
     margin-right: 1rem;
-    background: url(/assets/img/logo2.png);
+    background: url(assets/img/logo2.png);
     background-position: center;
     background-size: cover;
     justify-content: center;
